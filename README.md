@@ -6,6 +6,9 @@ pip install tapioca-trustwave
 ```
 
 ## Documentation
+```bash
+export TRUSTWAVE_API_ROOT=http://uri_api
+```
 ``` python
 from tapioca_trustwave import Trustwave
 
