@@ -66,13 +66,13 @@ if sys.argv[-1] == 'publish':
 
 
 setup(
-    name='tapioca-trustwave',
+    name='tapioca-trustwave-appscanner',
     version=get_version(package),
-    description='Trustwave API wrapper using tapioca',
+    description='Trustwave Appscanner API wrapper using tapioca',
     long_description=readme,
     author=get_author(package),
     author_email=get_email(package),
-    url='https://github.com/geislor/tapioca-trustwave',
+    url='https://github.com/geislor/tapioca-trustwave-appscanner',
     packages=[
         'tapioca_trustwave',
     ],

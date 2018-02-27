@@ -2,7 +2,7 @@
 
 ## Installation
 ```
-pip install tapioca-trustwave
+pip install tapioca-trustwave-appscanner
 ```
 
 ## Documentation
