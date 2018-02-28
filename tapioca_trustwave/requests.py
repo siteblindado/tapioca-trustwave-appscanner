@@ -20,3 +20,12 @@ def request_assessment_id_by_name(application_id, assessment_name):
         return request().data
     except ServerError as e:
         raise e
+
+
+def request_assessment_status(application_id, assessment_id):
+    try:
+        request = api.get_assessment_status(application_id=application_id,
+                                            assessment_id=assessment_id).get()
+        return request().data
+    except ServerError as e:
+        raise e
