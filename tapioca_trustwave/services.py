@@ -13,9 +13,9 @@ def application_exists(application_id):
     request = api.get_application_id_by_name(application_name=application_id).get()
     application_data = request().data
 
-    application_status = application_data.get('application-status')
+    application_exists = application_data.get('application-exists')
 
-    return application_status
+    return application_exists
 
 
 def get_application_id_by_name(application_name):
@@ -35,7 +35,7 @@ def assessment_exists(application_id, assessment_id):
                                              assessment_id=assessment_id).get()
     assessment_data = request().data
 
-    assessment_exists = assessment_data.get('assessment-status')
+    assessment_exists = assessment_data.get('assessment-exists')
 
     return assessment_exists
 
