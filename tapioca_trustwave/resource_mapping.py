@@ -1,6 +1,10 @@
 # coding: utf-8
 
 RESOURCE_MAPPING = {
+    'check_if_application_exists': {
+        'resource': '/application/{application_id}/exists',
+        'methods': ['GET']
+    },
     'create_application': {
         'resource': '/application',
         'methods': ['POST']
