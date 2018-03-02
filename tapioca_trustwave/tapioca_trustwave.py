@@ -7,11 +7,20 @@ from tapioca import (
 from .resource_mapping import RESOURCE_MAPPING
 
 
+PROTOCOL = os.getenv('TRUSTWAVE_PROTOCOL')
+SERVER = os.getenv('TRUSTWAVE_SERVER')
+CLIENT = os.getenv('TRUSTWAVE_CLIENT')
+CUSTOMER = os.getenv('TRUSTWAVE_CUSTOMER')
+
+
 class TrustwaveClientAdapter(JSONAdapterMixin, TapiocaAdapter):
+    api_root = '{protocol}://{server}/Hailstorm.WS/HailstormRESTService.svc/' \
+               'client/{client}/customer/{customer}/'.format(
+        protocol=PROTOCOL, server=SERVER, client=CLIENT, customer=CUSTOMER)
     resource_mapping = RESOURCE_MAPPING
 
     def get_api_root(self, api_params):
-        return os.getenv('TRUSTWAVE_API_ROOT')
+        return api_params.get('api_root')
 
     def get_request_kwargs(self, api_params, *args, **kwargs):
         params = super(TrustwaveClientAdapter, self).get_request_kwargs(
