@@ -6,14 +6,11 @@ pip install tapioca-trustwave-appscanner
 ```
 
 ## Documentation
-```bash
-export TRUSTWAVE_API_ROOT=http://uri_api
-```
 ``` python
 from tapioca_trustwave import Trustwave
 
 
-api = Trustwave()
+api = Trustwave(server='appscan.com', client='client_name', customer='customer_name')
 
 ```
 
