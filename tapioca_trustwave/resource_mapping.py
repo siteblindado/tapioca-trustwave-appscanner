@@ -26,7 +26,7 @@ RESOURCE_MAPPING = {
         'methods': ['GET']
     },
     'get_assessment_run_results': {
-        'resource': '/application/{application_id}/assessmentrun/{assessment_run_id}/results?getRequestResponseData=true&includePagesVisited=true&onlyDistinctPagesVisited=true&exportFormat=json',
+        'resource': '/application/{application_id}/assessmentrun/{assessment_run_id}/results',
         'methods': ['GET']
     },
     'get_assessment_run_status': {
