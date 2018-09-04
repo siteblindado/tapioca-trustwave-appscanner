@@ -9,6 +9,10 @@ RESOURCE_MAPPING = {
         'resource': '/application',
         'methods': ['POST']
     },
+    'update_application': {
+        'resource': '/application/{application_id}',
+        'methods': ['PUT']
+    },
     'get_application_id_by_name': {
         'resource': '/application/{application_name}/id',
         'methods': ['GET']
